@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { colors } from "./src/utils/colors";
 import Focus from "./src/features/Focus";
+import Timer from "./src/features/Timer";
 
 export default function App() {
   const [currSubject, setCurrSubject] = useState(null);
@@ -18,9 +19,11 @@ export default function App() {
       {!currSubject ? (
         <Focus addSubject={setCurrSubject}/>
       ) : (
-        <View>
-          <Text>Focus On : {currSubject}</Text>
-        </View>
+        <Timer
+        focusSubject={currSubject}
+        onTimerEnd={()=>{}}
+        clearSubject={()=>{}}
+        />
       )}
      
     </SafeAreaView>
