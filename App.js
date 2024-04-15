@@ -14,6 +14,7 @@ export default function App() {
   const [currSubject, setCurrSubject] = useState(null);
   return (
     <SafeAreaView style={styles.container}>
+      
       {!currSubject ? (
         <Focus addSubject={setCurrSubject}/>
       ) : (
@@ -21,6 +22,7 @@ export default function App() {
           <Text>Focus On : {currSubject}</Text>
         </View>
       )}
+     
     </SafeAreaView>
   );
 }
