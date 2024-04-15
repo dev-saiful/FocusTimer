@@ -12,7 +12,7 @@ import Focus from "./src/features/Focus";
 import Timer from "./src/features/Timer";
 
 export default function App() {
-  const [currSubject, setCurrSubject] = useState(null);
+  const [currSubject, setCurrSubject] = useState("test");
   return (
     <SafeAreaView style={styles.container}>
       
